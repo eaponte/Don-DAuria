@@ -63,27 +63,27 @@ hr {
 .brand {
     display: inherit;
     margin: 0;
-    padding: 30px 0 10px;
+    padding: 15px 0 10px;
     text-align: center;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
     font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 3em;
     font-weight: 700;
     line-height: normal;
-    color: #b77033;
+    color: #b73338;
 }
 
 .sub-brand {
     display: inherit;
-    margin: 0;
+    margin: -15px 0 0;
     padding: 0 0 40px;
     text-align: center;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
     text-transform: uppercase;
     font-size: 1.3em;
     font-weight: 400;
     letter-spacing: 3px;
-    color: #b77033;
+    color: #b73338;
 }
 
 .navbar-brand {
@@ -180,10 +180,6 @@ footer p {
 }
 
 @media screen and (min-width:768px) {
-    .brand {
-        font-size: 6em;
-    }
-
     .top-divider {
         margin-top: 0;
     }
@@ -193,17 +189,14 @@ footer p {
         margin-right: 25px;
     }
 
+     .brand {
+        font-size: 6em;
+    }
+
     .sub-brand {
-        display: inherit;
-        margin: 0;
-        padding: 0 0 40px;
-        text-align: center;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        text-transform: uppercase;
-        font-size: 2.5em;
-        font-weight: 400;
-        letter-spacing: 3px;
-        color: #b77033;
+        margin-top: -20px;
+        font-size: 2.65em;
+        font-weight: 600;
     }
 
     .navbar {
