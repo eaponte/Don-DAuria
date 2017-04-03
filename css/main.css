@@ -17,6 +17,14 @@ p {
     font-size: 1.25em;
     line-height: 1.8;
     color: #000;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.thequote {
+    font-size: 1.25em;
+    line-height: 1.8;
+    color: #000;
 }
 
 q {
@@ -38,7 +46,21 @@ q:before {
 }
 
 q:after {
-    content: none;
+    content: close-quote;
+    color: #b77033;
+    font-size: 4em;
+    line-height: .3em;
+    vertical-align: -.4em;
+    margin-left: .1em;
+}
+
+.quoteby {
+    display: block;
+    width: 80%;
+    background-color: #FFF;
+    padding: 0 20px 20px;
+    margin: -30px auto 45px;
+    border-left: 7px solid #b77033;
 }
 
 hr {
@@ -46,15 +68,40 @@ hr {
     border-color: #999999;
 }
 
-.brand,
+.brand {
+    display: inherit;
+    margin: 0;
+    padding: 15px 0 10px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 3em;
+    font-weight: 700;
+    line-height: normal;
+    color: #b73338;
+}
+
 .sub-brand {
-    display: none;
+    display: inherit;
+    margin: -15px 0 0;
+    padding: 0 0 40px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #b73338;
 }
 
 .navbar-brand {
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: 2px;
+}
+
+.navbar {
+    margin-bottom: 0;
 }
 
 .navbar-nav {
@@ -82,8 +129,9 @@ hr {
 }
 
 .hero-home {
-    height: 400px;
-    background: linear-gradient(0deg,rgba(183,112,81,0.3),rgba(183,112,81,0.3)), url('../images/skyline3.jpg');
+    width: 100%;
+    height: 280px;
+    background-image: url('../images/cities-travel-world-header-1920.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -91,22 +139,42 @@ hr {
 
 .hero-content {
     position: relative;
-    top: 25%;
     width: 80%;
     margin: auto;
-    color: #FFF;
+    color: #b73338;
 }
 
-.hero-content hr {
-    max-width: 100%;
-    border-color: #FFF;
-    padding-bottom: 8px;
+.box-top {
+    margin-top: -50px;
 }
 
 .box {
-    margin-bottom: 20px;
+    min-height: 800px;
+    margin-bottom: 40px;
     padding: 30px 15px;
     background: #F0EDEB;
+    box-shadow: 0px 7px 9px 0px rgba(0,0,0,0.65);
+    -moz-box-shadow: 0px 7px 9px 0px rgba(0,0,0,0.65);
+    -webkit-box-shadow: 0px 7px 9px 0px rgba(0,0,0,0.65);
+}
+
+.box ul {
+    font-size: 1.25em;
+    line-height: 1.8;
+    list-style: none;
+}
+
+.box li {
+    line-height: 1.75em;
+}
+
+.box li:before {
+    display: inline-block;
+    content: "\2022";
+    font-size: 1.75em;
+    padding-right: 7px;
+    vertical-align: middle;
+    color: #b73338;
 }
 
 .intro-text {
@@ -114,6 +182,31 @@ hr {
     font-size: 1.25em;
     font-weight: 400;
     letter-spacing: 1px;
+}
+
+.box a {
+    color: #b77033;
+}
+
+.box a:hover {
+    color: #337AB7;
+    text-decoration: none;
+}
+
+.sub-heading {
+    text-transform: uppercase;
+    font-size: 1.25em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 30px 0;
+}
+
+.sub-heading:after {
+    content: "";
+    display: block;
+    width: 50px;
+    margin-top: 10px;
+    border-top: 5px solid #b73338;
 }
 
 .img-border {
@@ -125,6 +218,14 @@ hr {
 .img-left {
     float: none;
     margin: 0 auto 0;
+}
+
+.headshot-img {
+    float: none;
+    display: block;
+    width: 250px;
+    margin: 0 auto 20px;
+    border: 5px solid #b73338;
 }
 
 footer {
@@ -139,19 +240,6 @@ footer p {
 }
 
 @media screen and (min-width:768px) {
-    .brand {
-        display: inherit;
-        margin: 0;
-        padding: 30px 0 10px;
-        text-align: center;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-size: 5em;
-        font-weight: 700;
-        line-height: normal;
-        color: #fff;
-    }
-
     .top-divider {
         margin-top: 0;
     }
@@ -161,17 +249,14 @@ footer p {
         margin-right: 25px;
     }
 
+     .brand {
+        font-size: 6em;
+    }
+
     .sub-brand {
-        display: inherit;
-        margin: 0;
-        padding: 0 0 40px;
-        text-align: center;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        text-transform: uppercase;
-        font-size: 1.25em;
-        font-weight: 400;
-        letter-spacing: 3px;
-        color: #fff;
+        margin-top: -20px;
+        font-size: 2.65em;
+        font-weight: 600;
     }
 
     .navbar {
@@ -214,6 +299,17 @@ footer p {
         margin: 0 auto;
         table-layout: fixed;
         font-size: 1.25em;
+    }
+
+    .hero-home {
+        width: 100%;
+        height: 380px;
+    }
+
+    .headshot-img {
+        float: left;
+        display: inline-block;
+        margin: 0 20px 20px 0;
     }
 }
 
