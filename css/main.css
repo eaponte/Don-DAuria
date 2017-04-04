@@ -21,7 +21,7 @@ p {
     padding-right: 10px;
 }
 
-.thequote {
+.thequote, .thequote2 {
     font-size: 1.25em;
     line-height: 1.8;
     color: #000;
@@ -54,6 +54,28 @@ q:after {
     margin-left: .1em;
 }
 
+.thequote2 q {
+    border-left: 7px solid #FFF;
+}
+
+.thequote2 q:before {
+    content: open-quote;
+    color: #000;
+    font-size: 1.25em;
+    line-height: 1.8;
+    vertical-align: baseline;
+    margin-right: 0;
+}
+
+.thequote2 q:after {
+    content: close-quote;
+    color: #000;
+    font-size: 1.25em;
+    line-height: 1.8;
+    vertical-align: baseline;
+    margin-left: 0;
+}
+
 .quoteby {
     display: block;
     width: 80%;
@@ -61,6 +83,16 @@ q:after {
     padding: 0 20px 20px;
     margin: -30px auto 45px;
     border-left: 7px solid #b77033;
+}
+
+.quoteby2 {
+    display: block;
+    width: 80%;
+    color: #FFF;
+    background-color: #b73338;
+    padding: 0 20px 2px;
+    margin: -30px auto 45px;
+    border-left: 7px solid #b73338;
 }
 
 hr {
@@ -193,6 +225,14 @@ hr {
     text-decoration: none;
 }
 
+.sub-heading-no-border {
+    text-transform: uppercase;
+    font-size: 1.25em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 30px 0;
+}
+
 .sub-heading {
     text-transform: uppercase;
     font-size: 1.25em;
@@ -201,11 +241,11 @@ hr {
     margin: 30px 0;
 }
 
-.sub-heading:after {
+.sub-heading:before {
     content: "";
     display: block;
     width: 50px;
-    margin-top: 10px;
+    margin-bottom: 10px;
     border-top: 5px solid #b73338;
 }
 
