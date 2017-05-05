@@ -14,6 +14,9 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
     <!-- Custom CSS -->
     <link href="css/main.css" rel="stylesheet">
 
@@ -105,8 +108,58 @@
                     <h2 class="intro-text text-center"><strong>Contact</strong></h2>
                     <hr>
 
-                    <h3 class="sub-heading">For a price quote or answers to any questions you may have, contact me at</h3>
+                    <h3 class="sub-heading">For a price quote or answers to any questions you may have, contact me below.</h3>
 
+                    <div class="row">
+                        
+                        <div class="col-lg-8" style="padding-top: 20px;">
+                            
+                            <form action="mailer.php" method="post">
+
+                                <div class="form-group col-lg-6">
+                                    <label class="sr-only" for="persons-name">Name:</label>
+                                    <input type="text" class="form-control" id="persons-name" name="PersonsName" placeholder="Your name...">
+                                </div>
+
+                                <div class="form-group col-lg-6">
+                                    <label class="sr-only" for="persons-email">Email:</label>
+                                    <input type="email" class="form-control" id="persons-email" name="EmailAddress" placeholder="Your email...">
+                                </div>
+
+                                <div class="form-group col-lg-12">
+                                    <label class="sr-only" for="subject">Subject:</label>
+                                    <input type="text" class="form-control" id="subject" name="Subject" placeholder="Subject...">
+                                </div>
+
+                                <div class="form-group col-lg-12">
+                                    <label class="sr-only" for="message">Message:</label>
+                                    <textarea class="form-control" id="message" name="Message" placeholder="Type your message here..." rows="12"></textarea>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <button type="submit" name="submit" class="btn btn-lg btn-default send-btn"><span class="glyphicon glyphicon-send" aria-hidden="true"></span>&nbsp;&nbsp;Send</button>
+                                </div>
+
+                            </form>
+
+                        </div> <!-- /.col-lg-8 -->
+
+                        <div class="col-lg-4 contact-info">
+                            
+                            <p>
+                                <i class="fa fa-envelope-open-o"></i>
+                                <a id="theEmailAddress"></a>
+                            </p>
+
+                            <p>
+                                <i class="fa fa-linkedin-square"></i>
+                                <a href="https://www.linkedin.com/in/don-d-auria-909282109" target="_blank">Don D'Auria on Linked in</a>
+
+                            </p>
+
+                        </div> <!-- /.col-lg-4 -->
+
+                    </div> <!-- /.row -->
 
                 </div>
                 <!-- /.col-lg-12 -->
@@ -135,6 +188,20 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+
+        var emailName = "don";
+        var domainName = "dondauriaeditorial";
+        var tld = "com";
+        var atSymbol = "&#64;";
+        var dotSymbol = "&#46;"
+        var fullEmail = emailName + atSymbol + domainName + dotSymbol + tld;
+
+        document.getElementById('theEmailAddress').innerHTML = fullEmail;
+        document.getElementById('theEmailAddress').href = 'mailto:' + emailName + '@' + domainName + '.' + tld;
+
+    </script>
 
 </body>
 
